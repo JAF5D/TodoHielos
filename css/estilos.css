@@ -78,7 +78,7 @@ main {
   flex-direction: column;
   background:
     linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.56) 42%, rgba(0, 0, 0, 0.18) 75%, rgba(0, 0, 0, 0.05) 100%),
-    url("../assets/images/cubos.jpg") center center / cover no-repeat;
+    url("../assets/images/Ice_Cubes.jpg") center center / cover no-repeat;
 }
 
 /* Aqui se define el estilo general de la barra de navegacion que se reutiliza en todo el sitio. */
@@ -387,7 +387,7 @@ a.active {
     min-height: 100vh;
     background:
       linear-gradient(180deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.16) 100%),
-      url("../assets/images/cubos.jpg") center center / cover no-repeat;
+      url("../assets/images/Ice_Cubes.jpg") center center / cover no-repeat;
   }
 
   .hero-box {
