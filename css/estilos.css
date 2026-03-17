@@ -24,7 +24,11 @@ body {
   overflow-x: hidden;
   color: var(--color-text);
   background:
-    radial-gradient(circle at top left, rgba(121, 215, 190, 0.18), transparent 30%),
+    radial-gradient(
+      circle at top left,
+      rgba(121, 215, 190, 0.18),
+      transparent 30%
+    ),
     linear-gradient(180deg, #fcfbf8 0%, var(--color-surface) 100%);
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -77,13 +81,23 @@ main {
   display: flex;
   flex-direction: column;
   background:
-    linear-gradient(90deg, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.56) 42%, rgba(0, 0, 0, 0.18) 75%, rgba(0, 0, 0, 0.05) 100%),
+    linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0.82) 0%,
+      rgba(0, 0, 0, 0.56) 42%,
+      rgba(0, 0, 0, 0.18) 75%,
+      rgba(0, 0, 0, 0.05) 100%
+    ),
     url("../assets/images/cubos.jpeg") center center / cover no-repeat;
 }
 
 /* Aqui se define el estilo general de la barra de navegacion que se reutiliza en todo el sitio. */
 .navbar {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) !important;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  ) !important;
   backdrop-filter: blur(12px);
   border-bottom: none;
   box-shadow: 0 8px 24px rgba(46, 80, 119, 0.16);
@@ -150,7 +164,11 @@ main {
   bottom: 0.2rem;
   height: 3px;
   border-radius: 999px;
-  background: linear-gradient(90deg, var(--color-secondary), var(--color-accent));
+  background: linear-gradient(
+    90deg,
+    var(--color-secondary),
+    var(--color-accent)
+  );
 }
 
 /* Este banner sirve como contenedor destacado para mensajes importantes o llamadas a la accion. */
@@ -209,14 +227,20 @@ main {
 /* Aqui se define el estilo comun de los botones principales para mantener consistencia visual en toda la web. */
 .btn,
 .btn:visited {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-accent),
+    var(--color-secondary)
+  );
   color: var(--color-primary) !important;
   border: none;
   border-radius: 999px;
   padding: 0.85rem 1.6rem;
   font-weight: 700;
   box-shadow: 0 10px 24px rgba(121, 215, 190, 0.28);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .home .hero-box .btn,
@@ -253,7 +277,11 @@ main {
   padding: 2rem 1.5rem;
   border-radius: 24px;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.92), rgba(246, 244, 240, 0.84)),
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.92),
+      rgba(246, 244, 240, 0.84)
+    ),
     linear-gradient(135deg, rgba(77, 161, 169, 0.1), rgba(121, 215, 190, 0.12));
   border: 1px solid rgba(77, 161, 169, 0.14);
   box-shadow: var(--shadow-card);
@@ -352,7 +380,11 @@ footer {
   margin-top: 4rem;
   padding: 2rem 1.5rem;
   color: var(--color-surface);
-  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
 }
 
 .footer-group {
@@ -369,7 +401,9 @@ footer {
 
 .social-link {
   color: var(--color-surface);
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .social-link:hover {
@@ -386,7 +420,12 @@ a.active {
   .hero {
     min-height: 100vh;
     background:
-      linear-gradient(180deg, rgba(0, 0, 0, 0.76) 0%, rgba(0, 0, 0, 0.4) 55%, rgba(0, 0, 0, 0.16) 100%),
+      linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.76) 0%,
+        rgba(0, 0, 0, 0.4) 55%,
+        rgba(0, 0, 0, 0.16) 100%
+      ),
       url("../assets/images/cubos.jpeg") center center / cover no-repeat;
   }
 

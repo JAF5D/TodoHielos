@@ -36,7 +36,10 @@ main {
   height: auto;
   object-fit: cover;
   border-radius: 18px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
   margin-bottom: 18px;
   display: block;
   cursor: pointer;

@@ -14,7 +14,7 @@ const presupuestoTotal = document.getElementById("presupuesto-total");
 // Estas funciones limpian lo que el usuario escribe para que cada campo admita
 // solo el tipo de dato esperado incluso antes de validar el formulario.
 function permitirSoloLetras(valor) {
-  return valor.replace(/[^A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]/g, "");
+  return valor.replace(/[^\u0041-\u005A\u0061-\u007A\u00C0-\u017F\s]/g, "");
 }
 
 function permitirSoloNumeros(valor) {
@@ -53,7 +53,7 @@ extras.forEach((extra) => extra.addEventListener("change", calcularPresupuesto))
 // Comprobamos que el nombre tenga un formato razonable: solo letras
 // y una longitud que no supere el limite definido.
 function validarNombre() {
-  const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/;
+  const regex = /^[\u0041-\u005A\u0061-\u007A\u00C0-\u017F\s]+$/;
 
   if (!regex.test(nombre.value) || nombre.value.length > 15) {
     document.getElementById("error-nombre").textContent = "Solo letras, max 15 caracteres.";
@@ -67,7 +67,7 @@ function validarNombre() {
 // Los apellidos se validan con una regla parecida a la del nombre
 // para mantener el formulario coherente y evitar entradas invalidas.
 function validarApellidos() {
-  const regex = /^[A-Za-zÁÉÍÓÚáéíóúÑñÜü\s]+$/;
+  const regex = /^[\u0041-\u005A\u0061-\u007A\u00C0-\u017F\s]+$/;
 
   if (!regex.test(apellidos.value) || apellidos.value.length > 40) {
     document.getElementById("error-apellidos").textContent = "Solo letras, max 40 caracteres.";
