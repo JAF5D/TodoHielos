@@ -1,0 +1,147 @@
+/* Estas reglas base preparan la estructura general del modulo para que el formulario se vea ordenado desde el inicio. */
+body {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Limitamos el ancho del contenido para que leer y rellenar el formulario resulte mas comodo. */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 2.5rem 1rem 0;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  font-weight: 800;
+}
+
+/* Esta es la caja principal del formulario y funciona como contenedor visual de todo el proceso. */
+form {
+  max-width: 760px;
+  margin: auto;
+  padding: 2rem;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.82);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Cada fieldset separa grupos de informacion para que el formulario sea mas facil de entender. */
+fieldset {
+  margin-bottom: 1.5rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(77, 161, 169, 0.24);
+  border-radius: 18px;
+  background: rgba(246, 244, 240, 0.7);
+}
+
+legend {
+  padding: 0 0.5rem;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* Aqui damos a los campos una apariencia coherente con el estilo general de la web y mas agradable al usar. */
+input,
+select {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.9rem;
+  box-sizing: border-box;
+  border: 1px solid rgba(46, 80, 119, 0.18);
+  border-radius: 14px;
+  background: #fff;
+  color: var(--color-text);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-secondary);
+  box-shadow: 0 0 0 4px rgba(77, 161, 169, 0.16);
+}
+
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.45rem;
+}
+
+/* Este grupo coloca los extras uno debajo de otro para que se puedan revisar y marcar sin confusion. */
+.extras-list {
+  margin-bottom: 0.9rem;
+}
+
+.extra-row {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: 0.6rem;
+  font-weight: 500;
+}
+
+.extra-row input[type="checkbox"] {
+  margin-bottom: 0;
+}
+
+/* Los mensajes de error se muestran de forma clara para ayudar al usuario a corregir lo necesario. */
+.field-error {
+  display: block;
+  margin-top: -0.45rem;
+  margin-bottom: 0.8rem;
+  color: #b34747;
+  font-size: 0.92rem;
+}
+
+/* Este bloque destaca el total calculado para que el usuario vea rapidamente el precio actualizado. */
+#presupuesto-total {
+  margin-bottom: 1rem;
+  padding: 1rem 1.1rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(77, 161, 169, 0.12), rgba(121, 215, 190, 0.24));
+  color: var(--color-primary);
+  font-weight: 800;
+  font-size: 1.2em;
+  border: 1px solid rgba(77, 161, 169, 0.2);
+}
+
+/* Estos estilos dan aspecto de accion principal a los botones de enviar y reiniciar. */
+button {
+  padding: 0.9rem 1.4rem;
+  margin-right: 0.75rem;
+  margin-top: 0.5rem;
+  border: none;
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-accent));
+  color: var(--color-primary);
+  font-weight: 700;
+  box-shadow: 0 10px 24px rgba(77, 161, 169, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 25px;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(77, 161, 169, 0.28);
+}
+
+@media (max-width: 768px) {
+  /* En movil simplificamos el espaciado y hacemos que los botones ocupen el ancho disponible. */
+  form {
+    padding: 1.25rem;
+  }
+
+  button {
+    width: 100%;
+    margin-right: 0;
+  }
+}

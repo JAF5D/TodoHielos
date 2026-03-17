@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo Hielos</title>
+    <!-- Esta marca le dice al CSS que JavaScript esta disponible y que puede activar las animaciones de entrada. -->
+    <script>
+      document.documentElement.classList.add("js-enabled");
+    </script>
+    <link rel="stylesheet" href="./css/estilos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="home">
+    <!-- Esta es la portada principal del sitio, con la imagen de fondo y el espacio donde se carga la cabecera comun. -->
+    <section class="hero">
+      <div data-shared-header></div>
+      <!-- Aqui va el mensaje de bienvenida que aparece por encima de la imagen principal. -->
+      <div class="hero-box">
+        <h2 class="hero-item">Bienvenido</h2>
+        <p class="hero-item">Hielo de todo tipo</p>
+        <a href="/modulos/presupuesto.html" class="btn hero-item">Pide tu hielo aqui</a>
+      </div>
+    </section>
+    <main>
+      <!-- Este bloque se rellena desde JavaScript con las noticias guardadas en el archivo JSON. -->
+      <section class="py-5 bg-light reveal-news">
+        <div class="container text-center mb-5 news-head">
+          <h2 class="display-5 fw-bold text-primary news-title">Ultimas Novedades de TodoHielos</h2>
+          <p class="lead text-muted news-text">
+            Mantente al dia con nuestros servicios y consejos para tus eventos.
+          </p>
+        </div>
+        <div class="container">
+          <div class="row" id="contenedor-noticias"></div>
+        </div>
+      </section>
+      <!-- Seccion pensada para explicar de forma breve quienes somos como empresa. -->
+      <section class="section-wrap reveal-about">
+        <div class="info-card">
+          <div class="info-text">
+            <h2 class="section-title">Quienes somos?</h2>
+            <p class="section-copy">
+              Somos una empresa creada el 11 de septiembre de 1928, cuando el
+              empresario Carlos Lopez decidio vender hielo en la feria de Sevilla, al
+              cabo de muchos anos su negocio crecio hasta tener un local y seguir
+              expandiendose a lo que conocemos hoy en dia como Todo Hielos.
+            </p>
+          </div>
+          <div class="info-image">
+            <img src="/assets/images/trabajadores.jpg" alt="Quienes somos" />
+          </div>
+        </div>
+      </section>
+      <!-- Seccion que resume que hacemos y que tipo de productos o servicios ofrecemos. -->
+      <section class="section-wrap reveal-work">
+        <div class="info-card">
+          <div class="info-text">
+            <h2 class="section-title">Que hacemos?</h2>
+            <p class="section-copy">
+              Nos empenamos en hacer hielo clasico y personalizado: cubos de
+              diferentes tamanos, hielo picado y esculturas que dependen
+              unicamente de tu imaginacion.
+            </p>
+          </div>
+          <div class="info-image">
+            <img src="/assets/images/escultor.jpg" alt="Que hacemos" />
+          </div>
+        </div>
+      </section>
+      <!-- Este bloque funciona como acceso visual destacado a la galeria de trabajos. -->
+      <section class="section-wrap reveal-gallery">
+        <div class="info-card">
+          <div class="info-text">
+            <h2 class="section-title">
+              <a class="gallery-link" href="/modulos/galeria.html">Ice Gallery</a>
+            </h2>
+            <p class="section-copy">
+              Explora una variedad de esculturas de hielo y elige la que mejor
+              encaje con tu evento o inspirate para crear una totalmente nueva.
+            </p>
+          </div>
+          <div class="info-image">
+            <img src="/assets/images/castillo.jpg" alt="Ice Gallery" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <div data-shared-footer></div>
+    <!-- Este script se encarga de insertar automaticamente el header y el footer compartidos. -->
+    <script src="/js/layout.js"></script>
+    <!-- Este archivo contiene la logica exclusiva de la portada, como animaciones y noticias. -->
+    <script src="/js/index.js"></script>
+    <script>
+      // Esperamos a que el HTML este listo para cargar las noticias en su contenedor sin errores.
+      document.addEventListener("DOMContentLoaded", () => {
+        cargarNoticias();
+      });
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
