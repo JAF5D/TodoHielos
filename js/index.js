@@ -1,3 +1,15 @@
+function obtenerRutaSitio(ruta) {
+  const scriptActual =
+    document.currentScript ||
+    Array.from(document.scripts).find((script) => script.src.includes("/js/index.js"));
+
+  const siteRootUrl = scriptActual
+    ? new URL("../", scriptActual.src)
+    : new URL("./", window.location.href);
+
+  return new URL(ruta.replace(/^\//, ""), siteRootUrl).toString();
+}
+
 // Esta funcion prepara las animaciones de la portada para que cada bloque aparezca
 // suavemente cuando entra en pantalla y la pagina se sienta mas viva.
 function activarScrollRevealInicio() {
@@ -38,7 +50,7 @@ function activarScrollRevealInicio() {
 // Esta funcion lee el archivo JSON de noticias y crea las tarjetas que se muestran
 // en la pagina principal sin tener que escribirlas una por una en el HTML.
 function cargarNoticias() {
-  fetch("/assets/data/noticias.json")
+  fetch(obtenerRutaSitio("assets/data/noticias.json"))
     .then((response) => {
       if (!response.ok) {
         throw new Error("Error al cargar el JSON de noticias");
